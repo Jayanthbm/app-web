@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support & FAQ - ParkPin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0F172A;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --primary: #3B82F6;
+            --primary-glow: rgba(59, 130, 246, 0.3);
+            --text-primary: #F8FAFC;
+            --text-secondary: #94A3B8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 40px 20px;
+            background-image: 
+                radial-gradient(circle at 15% 15%, var(--primary-glow) 0%, transparent 40%),
+                radial-gradient(circle at 85% 85%, rgba(139, 92, 246, 0.15) 0%, transparent 40%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 48px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .logo-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #3B82F6, #8B5CF6);
+            color: white;
+            font-weight: 700;
+            font-size: 14px;
+            padding: 6px 16px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .faq-item {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+
+        .faq-question {
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .faq-answer {
+            font-size: 15px;
+            color: var(--text-secondary);
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(139, 92, 246, 0.15));
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            margin-top: 32px;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+            padding: 12px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            margin-top: 12px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px;
+                border-radius: 16px;
+            }
+            h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <span class="logo-badge">ParkPin</span>
+            <h1>Help & Support Center</h1>
+            <p style="color: var(--text-secondary);">Frequently Asked Questions & Customer Support</p>
+        </header>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: How do I sync my parking spot with my Wear OS watch?</div>
+            <div class="faq-answer">Make sure Bluetooth is enabled on both your phone and watch. When you pin a spot on either device, ParkPin automatically synchronizes your active parking location, vehicle details, and duration timer in real-time over the Wearable Data Layer API.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: How do I add ParkPin Tiles or Complications on Wear OS?</div>
+            <div class="faq-answer">Swipe left on your watch face to reach Tiles, tap and hold, then tap "+" to add the ParkPin Parking Tile. To add a watch face complication, customize your active watch face, select a slot, and choose ParkPin Status or Duration.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: How do Home Screen Widgets work?</div>
+            <div class="faq-answer">Long press on your Android home screen, select "Widgets", scroll to ParkPin, and pick from Compact (2x2), Standard (4x2), or Dashboard (4x3) layouts.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: Does ParkPin store my location history online?</div>
+            <div class="faq-answer">No. All parking coordinates and history are stored locally on your device for complete privacy and security.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: How do I restore my purchase on a new device?</div>
+            <div class="faq-answer">As long as you are logged into the same Google Play account used to purchase ParkPin Premium, your entitlement is automatically restored upon launching the app.</div>
+        </div>
+
+        <div class="contact-card">
+            <h3>Still need help?</h3>
+            <p style="color: var(--text-secondary); margin-top: 6px;">Our support team is ready to assist you with any questions or issues.</p>
+            <a href="mailto:jayanthbharadwaj.m@gmail.com" class="contact-btn">Contact Support</a>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 ParkPin. All rights reserved. | <a href="../privacy/">Privacy Policy</a> | <a href="../terms/">Terms of Service</a> | <a href="../support/">Support</a></p>
+        </footer>
+
+    </div>
+</body>
+</html>
